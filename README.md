@@ -23,7 +23,7 @@
 
 - Let's talk about **Graphics Design**
 
-- How to contact me  **neoodymiumm@yahoo.com**
+- How to contact me  **neowdymium@yahoo.com**
 
 - Know about my experiences <a href="*" target="blank">Resume</a></p>
 </div>
