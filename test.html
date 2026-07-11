@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <style>
+      /* Layout Positioning */
+      li {
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      li a {
+        display: inline-flex;
+        flex-direction: column; /* Forces the text below the icon */
+        align-items: center;
+        text-decoration: none;
+        color: #a0a0a0; /* Default icon/text color */
+        position: relative;
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Designing the Icon Circle (Adjust sizes to match your theme) */
+      li a.icon::before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #a0a0a0;
+        border-radius: 50%;
+        margin-bottom: 8px; /* Space between icon and text */
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Pop-up timing effect */
+      }
+
+      /* The Text Label */
+      li a .label-text {
+        font-size: 14px;
+        opacity: 1;
+        visibility: visible;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      /* --- Hover Effects --- */
+
+      /* 1. Icon changes color to white and pops up */
+      li a:hover::before {
+        color: #fff;
+        border-color: #fff;
+        transform: translateY(-5px) scale(1.1); /* Moves up slightly and scales for the 'popup' feel */
+      }
+
+      /* 2. Facebook text disappears */
+      li a:hover .label-text {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(
+          5px
+        ); /* Smoothly slides down slightly while fading out */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <li>
+        <a
+          href="https://www.facebook.com/farhan.islam.rafi.2024"
+          class="icon brands fa-facebook-f"
+        >
+          <span class="label-text">facebook</span>
+        </a>
+      </li>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+/* Parent Container: Handles Equal Distribution */
+.social-list {
+  display: flex;
+  justify-content: space-evenly; /* Truly equal spacing, including edges */
+  align-items: center;
+  padding: 0;
+  margin: 40px auto 0 auto; /* Adjust top margin to space away from the "CONTACT" header */
+  width: 100%; /* Spans across the entire contact container width */
+  max-width: 600px; /* Restricts max width so they don't stretch too far apart on wide screens */
+}
+
+/* Individual Item Setup */
+.social-item {
+  list-style: none;
+  display: inline-flex;
+  flex-direction: column; /* Forces the text directly under the icon */
+  align-items: center;
+  position: relative;
+}
+
+/* Icon Link Styling */
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #a0a0a0;
+  border-radius: 50%;
+  color: #a0a0a0;
+  text-decoration: none;
+  will-change: transform;
+
+  /* Smooth animation properties */
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Text Label Styling */
+.social-text {
+  margin-top: 10px; /* Space between icon and text underneath */
+  font-size: 14px;
+  color: #a0a0a0;
+  opacity: 1;
+  visibility: visible;
+
+  /* Smooth fade-out transition */
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+}
+
+/* --- Universal Hover Animation Logic --- */
+/* 1. Icon turns white and pops up smoothly */
+.social-item:hover .social-link {
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-8px) scale(1.15);
+  box-shadow: 0 6px 14px rgba(255, 255, 255, 0.15);
+}
+
+/* 2. Text disappears smoothly */
+.social-item:hover .social-text {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+}
+
+/* skills */
+
+#skills {
+  /* no background, no padding-box look — just plain layout */
+  color: #cfcfcf;
+  font-family: sans-serif;
+}
+
+.skills-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.skill-item {
+  font-size: 1rem;
+  padding: 4px 0;
+  cursor: default;
+  width: fit-content;
+  transition:
+    font-size 0.25s ease,
+    text-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.skill-item:hover {
+  font-size: calc(1rem + 0.1rem);
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 16px rgba(120, 170, 255, 0.5);
+}
+
+/* anchor  */
+
+#cs-intro {
+  color: #cfcfcf;
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+.topic-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted #cfcfcf;
+  padding-bottom: 0px; /* 👈 controls the gap between text and the dotted line — increase (e.g. 2px, 4px) to push line further down, decrease/negative (e.g. -1px) to pull it closer */
+  display: inline-block;
+  transition:
+    font-size 0.25s ease,
+    text-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.topic-link:hover {
+  font-size: calc(1rem + 0.1rem);
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 16px rgba(120, 170, 255, 0.5);
+  border-bottom-color: #ffffff;
+}
+
+/* education */
+
+#education-info {
+  color: #cfcfcf;
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+.edu-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted #cfcfcf;
+  padding-bottom: 0px; /* 👈 controls the gap between text and the dotted line — increase (e.g. 2px, 4px) to push line further down, decrease/negative (e.g. -1px) to pull it closer */
+  display: inline-block;
+  transition:
+    text-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.edu-link:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 16px rgba(120, 170, 255, 0.5);
+  border-bottom-color: #ffffff;
+}
